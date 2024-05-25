@@ -3,26 +3,22 @@
 // Использовать рекурсию, не использовать циклы.
 
 
-Console.Write("Введите число M: ");
 
-int m = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите число N: ");
-
-int n = Convert.ToInt32(Console.ReadLine());
-
-void PrintNaturalNumbers(int m, int n)
+void PrintNaturalNum(int m, int n)
 {
     if (m <= n)
     {
-        
-
-    }
-    else
-    {
         Console.Write(m + " ");
-        PrintNaturalNumbers(m - 1, n);
+        PrintNaturalNum(m + 1, n);
     }
+    
 }
 
-PrintNaturalNumbers(m, n);
+Console.Write("Введите число M: ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите число N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+PrintNaturalNum(m, n);
